@@ -1,10 +1,10 @@
 [
 {
-    "title": "MORE_LOGS",
+    "title": "MORE_LOGS_TEST",
     "version": "0.01",
     "graph_type": "plot",
     "chart_config" : {
-        "name": "MORE_LOGS",
+        "name": "MORE_LOGS_TEST",
         "y_label": "",
         "series_name_enabled": true,
         "height": 350,
