@@ -291,7 +291,7 @@
                 "data": [
                     {         
                         "val":"km_mp_play_avg_audio_bitrate",
-                        "label":"Avg Audio Rate 2",
+                        "label":"Avg Audio Rate",
                         "log_ids":["km.mp.play"],
                         "unit": "Kbps",        
                         "formatting": {"args": "val", "body": "return Number((val/1E3).toFixed(0))"},
@@ -319,7 +319,7 @@
                         }
                     }, {
                         "val":"km_mp_play_avg_video_bitrate",
-                        "label":"Avg Video Rate 2",
+                        "label":"Avg Video Rate",
                         "log_ids":"km.mp.play",
                         "unit": "Mbps",
                         "formatting": {"args": "val", "body": "return Number((val/1E6).toFixed(3))"},
@@ -340,7 +340,7 @@
                         }
                     }, {
                         "val":"km_mp_play_bitrate",
-                        "label":"Sel. Bitrate (play) 2",
+                        "label":"Sel. Bitrate (play)",
                         "log_ids":"km.mp.play",
                         "unit": "Mbps",
                         "formatting": {"args": "val", "body": "return Number((val/1E6).toFixed(3))"},
@@ -358,6 +358,51 @@
                             "with_data_range": false
                         }
                     } 
+                ]
+            },
+            {
+                "label": "Beacon",
+                "offset": 15,
+                "plotBandHeight": 10,
+                "grid_config": [
+                    {
+                        "step": 2,
+                        "scale": 5, 
+                        "unit": "Milisec", 
+                        "offset": 0, 
+                        "position": "left"
+                    }
+                ],                       
+                "data": [
+                    {         
+                        "val":"bcn",
+                        "label":"Beacon",
+                        "log_ids":["bcn.cert.rept"],
+                        "unit": "Milisec",        
+                        "formatting": {"args": "val", "body": "return Number((val/1E3).toFixed(0))"},
+                        "description":"Beacons test description",
+                        "data" : {"idx":24, "type":"num", "field":"applaunch_duration" },
+                        "config" : {
+                            "line_type": "step_right",
+                            "show": true,
+                            "color_order": 10,
+                            "mapping": {
+                                "func": "scaleValueToYCoord",
+                                "scaling_factor": 0.00002,
+                                "scaling_bias": 0,
+                                "minRange": 1.2,
+                                "maxRange": 3.4,
+                                "default_val": 0.6,
+                                "dict": {
+                                    "Initial Connection": 4.0,
+                                    "Start": 2.5,
+                                    "Stop": 1.0,
+                                    "undefined": "undefined"
+                                }
+                            },
+                            "with_data_range": false
+                        }
+                    }
                 ]
             }
         ]
