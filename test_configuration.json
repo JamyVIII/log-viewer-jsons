@@ -429,42 +429,27 @@
         "plotBandHeight": 10,
         "bands": [
             {
-                "label": "Beacon",
-                "offset": 15,
-                "plotBandHeight": 10,
-                "grid_config": [
-                    {
-                        "step": 2,
-                        "scale": 5, 
-                        "unit": "Milisec", 
-                        "offset": 0, 
-                        "position": "left"
-                    }
-                ],                       
+                "label": "Events",
+                "offset": 0,
+                "plotBandHeight": 5,
                 "data": [
-                    {         
-                        "val":"bcn",
-                        "label":"Beacon",
-                        "log_ids":["bcn.cert.rept"],
-                        "unit": "Milisec",        
-                        "formatting": {"args": "val", "body": "return Number((val/1E3).toFixed(0))"},
-                        "description":"Beacons test description",
-                        "data" : {"idx":24, "type":"num", "field":"applaunch_duration" },
+                    {
+                        "val":"ndk_rebuffer",
+                        "label":"Rebuffers (NDK)",
+                        "log_ids":["mstar.vdec.aud.underrun", "avpl.es.underrun"],
+                        "description":"Other Rebuffers (NDK, MSTAR)",
                         "config" : {
-                            "line_type": "step_right",
+                            "line_type": "single_event",
                             "show": true,
-                            "color_order": 10,
+                            "color_order": 9,
+                            "minVal": 0,
+                            "maxVal": 4.75,
                             "mapping": {
-                                "func": "scaleValueToYCoord",
-                                "scaling_factor": 0.00002,
-                                "scaling_bias": 0,
-                                "minRange": 1.2,
-                                "maxRange": 3.4,
-                                "default_val": 0.6,
+                                "func": "mapValueToYCoord",
+                                "minVal": 0,
+                                "maxVal": 4.75,
+                                "default_val": 4,
                                 "dict": {
-                                    "Initial Connection": 4.0,
-                                    "Start": 2.5,
-                                    "Stop": 1.0,
                                     "undefined": "undefined"
                                 }
                             },
