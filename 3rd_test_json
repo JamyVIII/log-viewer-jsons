@@ -236,16 +236,16 @@
         "color_table": "TAB20_TABLE",
         "minVal": 0, 
         "maxVal": 9.5,
-        "plotBandHeight": 10,
+        "plotBandHeight": 10000,
         "bands": [
             {
                 "label": "Beacon",
                 "offset": 15,
-                "plotBandHeight": 10,
+                "plotBandHeight": 10000,
                 "grid_config": [
                     {
                         "step": 2,
-                        "scale": 5, 
+                        "scale": 5000, 
                         "unit": "Milisec", 
                         "offset": 0, 
                         "position": "left"
@@ -260,6 +260,35 @@
                         "formatting": {"args": "val", "body": "return Number((val/1E3).toFixed(0))"},
                         "description":"Beacons test description",
                         "data" : {"idx":5, "type":"num", "field":"applaunch_duration" },
+                        "config" : {
+                            "line_type": "step_right",
+                            "show": true,
+                            "color_order": 10,
+                            "mapping": {
+                                "func": "scaleValueToYCoord",
+                                "scaling_factor": 0.00002,
+                                "scaling_bias": 0,
+                                "minRange": 1.2,
+                                "maxRange": 3.4,
+                                "default_val": 0.6,
+                                "dict": {
+                                    "Initial Connection": 4.0,
+                                    "Start": 2.5,
+                                    "Stop": 1.0,
+                                    "undefined": "undefined"
+                                }
+                            },
+                            "with_data_range": false
+                        }
+                    },
+                    {         
+                        "val":"bcn 2",
+                        "label":"Beacon 2",
+                        "log_ids":["bcn.cert.rept"],
+                        "unit": "Milisec",        
+                        "formatting": {"args": "val", "body": "return Number((val/1E3).toFixed(0))"},
+                        "description":"Beacons test description 2",
+                        "data" : {"idx":6, "type":"num", "field":"applaunch_duration" },
                         "config" : {
                             "line_type": "step_right",
                             "show": true,
