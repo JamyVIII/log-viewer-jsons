@@ -291,7 +291,7 @@
                 "data": [
                     {         
                         "val":"km_mp_play_avg_audio_bitrate",
-                        "label":"Avg Audio Rate",
+                        "label":"Avg Audio Rate 2",
                         "log_ids":["km.mp.play"],
                         "unit": "Kbps",        
                         "formatting": {"args": "val", "body": "return Number((val/1E3).toFixed(0))"},
@@ -319,7 +319,7 @@
                         }
                     }, {
                         "val":"km_mp_play_avg_video_bitrate",
-                        "label":"Avg Video Rate",
+                        "label":"Avg Video Rate 2",
                         "log_ids":"km.mp.play",
                         "unit": "Mbps",
                         "formatting": {"args": "val", "body": "return Number((val/1E6).toFixed(3))"},
@@ -340,7 +340,7 @@
                         }
                     }, {
                         "val":"km_mp_play_bitrate",
-                        "label":"Sel. Bitrate (play)",
+                        "label":"Sel. Bitrate (play) 2",
                         "log_ids":"km.mp.play",
                         "unit": "Mbps",
                         "formatting": {"args": "val", "body": "return Number((val/1E6).toFixed(3))"},
