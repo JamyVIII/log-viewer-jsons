@@ -449,7 +449,7 @@
                         "unit": "Milisec",        
                         "formatting": {"args": "val", "body": "return Number((val/1E3).toFixed(0))"},
                         "description":"Beacons test description",
-                        "data" : {"idx":6, "type":"num", "field":"applaunch_duration" },
+                        "data" : {"idx":5, "type":"num", "field":"applaunch_duration" },
                         "config" : {
                             "line_type": "step_right",
                             "show": true,
