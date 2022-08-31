@@ -413,7 +413,7 @@
     "version": "0.01",
     "graph_type": "plot",
     "chart_config" : {
-        "name": "EVEN_MORE_LOGS",
+        "name": "EVEN_MORE_AND_MORE_LOGS",
         "y_label": "",
         "series_name_enabled": true,
         "height": 350,
