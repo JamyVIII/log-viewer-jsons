@@ -1,10 +1,10 @@
 [
 {
-    "title": "MORE_LOGS_TEST",
+    "title": "MORE_LOGS",
     "version": "0.01",
     "graph_type": "plot",
     "chart_config" : {
-        "name": "MORE_LOGS_TEST",
+        "name": "MORE_LOGS",
         "y_label": "",
         "series_name_enabled": true,
         "height": 350,
@@ -262,80 +262,6 @@
                                 "dict": {
                                     "undefined": "undefined"
                                 }
-                            },
-                            "with_data_range": false
-                        }
-                    }
-                ]
-            },
-            {
-                "label": "Buffering",
-                "offset": 5,
-                "plotBandHeight": 10,
-                "grid_config": [
-                    {
-                        "step": 2,
-                        "scale": 5, 
-                        "unit": "Mbps", 
-                        "offset": 0, 
-                        "position": "left"
-                    }
-                ],                       
-                "data": [
-                    {         
-                        "val":"km_mp_buff_sel_bitrate",
-                        "label":"Sel. Bitrate (buff)",
-                        "log_ids":["km.mp.buff"],
-                        "unit": "Mbps",
-                        "formatting": {"args": "val", "body": "return Number((val/1E6).toFixed(3))"},
-                        "description":"Bitrate selected. It is a label assigned by the partner. [bits-per-second]",
-                        "data" : {"idx":5, "type":"num", "field":"sel_rate"},
-                        "config" : {
-                            "line_type": "step_right",
-                            "show": true,
-                            "color_order": 0,
-                            "mapping": {
-                                "func": "scaleValueToYCoord",
-                                "scaling_factor": 0.0000002,
-                                "scaling_bias": 0
-                            },
-                            "with_data_range": false
-                        }
-                    }, {
-                        "val":"km_mp_buff_average",
-                        "label":"Avg Speed",
-                        "log_ids":["km.mp.buff"],
-                        "unit": "Mbps",
-                        "formatting": {"args": "val", "body": "return Number((val/1E6).toFixed(3))"},
-                        "description":"Average measured network speed since the previous log",
-                        "data" : {"idx":8,  "type":"num", "field":"rate_avg"},
-                        "config" : {
-                            "line_type": "step_right",
-                            "show": true,
-                            "color_order": 4,
-                            "mapping": {
-                                "func": "scaleValueToYCoord",
-                                "scaling_factor": 0.0000002,
-                                "scaling_bias": 0
-                            },
-                            "with_data_range": false
-                        }
-                    }, {
-                        "val":"km_mp_buff_lowest_br",
-                        "label":"Lowest BR",
-                        "log_ids":"km.mp.buff",
-                        "unit": "Mbps",
-                        "formatting": {"args": "val", "body": "return Number((val/1E6).toFixed(3))"},
-                        "description":"The lowest available bitrate for selection. [bits-per-second]",
-                        "data" : {"idx":26, "type":"num", "field":"lowest_br"},
-                        "config" : {
-                            "line_type": "step_right",
-                            "show": true,
-                            "color_order": 2,
-                            "mapping": {
-                                "func": "scaleValueToYCoord",
-                                "scaling_factor": 0.0000002,
-                                "scaling_bias": 0
                             },
                             "with_data_range": false
                         }
